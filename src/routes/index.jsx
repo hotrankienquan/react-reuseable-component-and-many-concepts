@@ -7,6 +7,7 @@ import Accordion from '../components/Accordion/Accordion'
 import ToastNotification from '../components/ToastNotification/ToastNotification'
 import BouncingBall from '../components/BouncingBall/BouncingBall'
 import FormBuilder from '../components/FormBuilder/FormBuilder'
+import NoteApp from '../components/NoteApp/NoteApp'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -21,6 +22,8 @@ export const Route = createFileRoute('/')({
 // }
 
 function Index() {
+
+
   return (
     <div>
       {/* <motion.div 
@@ -61,6 +64,10 @@ function Index() {
 
       <div className='mt-4 ml-4'>
         <FormBuilder />
+      </div>
+
+      <div className='mt-4 ml-4'>
+        <NoteApp />
       </div>
     </div>
   )
