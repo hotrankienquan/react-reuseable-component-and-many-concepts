@@ -1,10 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import PulsingButton from '../components/Button/PulsingButton'
 import Modal from '../components/Modal/Modal'
 import Accordion from '../components/Accordion/Accordion'
 import ToastNotification from '../components/ToastNotification/ToastNotification'
+import BouncingBall from '../components/BouncingBall/BouncingBall'
+import FormBuilder from '../components/FormBuilder/FormBuilder'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -21,7 +23,7 @@ export const Route = createFileRoute('/')({
 function Index() {
   return (
     <div>
-        {/* <motion.div 
+      {/* <motion.div 
           className='box'
           animate={{
             translate: '200px',
@@ -37,21 +39,29 @@ function Index() {
 
         </motion.div> */}
 
-        <div className='mx-2'>
-          <PulsingButton />
-        </div>
+      <div className='mx-2'>
+        <PulsingButton />
+      </div>
 
-        <div className='mt-4 ml-4'>
-          <Modal />
-        </div>
+      <div className='mt-4 ml-4'>
+        <Modal />
+      </div>
 
-        <div className='mt-4 ml-4'>
-          <Accordion />
-        </div>
+      <div className='mt-4 ml-4'>
+        <Accordion />
+      </div>
 
-        <div className='mt-4 ml-4'>
-          <ToastNotification />
-        </div>
+      <div className='mt-4 ml-4'>
+        <ToastNotification />
+      </div>
+
+      <div className='mt-4 ml-4'>
+        <BouncingBall />
+      </div>
+
+      <div className='mt-4 ml-4'>
+        <FormBuilder />
+      </div>
     </div>
   )
 }
