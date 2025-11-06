@@ -8,6 +8,10 @@ import ToastNotification from '../components/ToastNotification/ToastNotification
 import BouncingBall from '../components/BouncingBall/BouncingBall'
 import FormBuilder from '../components/FormBuilder/FormBuilder'
 import NoteApp from '../components/NoteApp/NoteApp'
+import Counter from '../components/Counter/Counter'
+import AllProduct from '../components/Allproduct/AllProduct'
+import { useState } from 'react'
+import AddNewProduct from '../components/Addnewproduct/AddNewProduct'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -22,8 +26,9 @@ export const Route = createFileRoute('/')({
 // }
 
 function Index() {
-
-
+  const [counter, setCounter] =useState(0)
+  console.log(counter);
+  
   return (
     <div>
       {/* <motion.div 
@@ -68,6 +73,20 @@ function Index() {
 
       <div className='mt-4 ml-4'>
         <NoteApp />
+      </div>
+
+       <div className='mt-4 ml-4 mb-10'>
+        <Counter />
+      </div>
+          <div>
+            <button onClick={() =>setCounter(() => counter + 1)}>change the counter state</button>
+          </div>
+       <div className='mt-4 ml-4 mb-10'>
+        <AllProduct />
+      </div>
+
+       <div className='mt-4 ml-4 mb-10'>
+        <AddNewProduct />
       </div>
     </div>
   )
